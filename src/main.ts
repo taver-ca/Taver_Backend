@@ -6,8 +6,8 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
   const config = new DocumentBuilder()
-    .setTitle('Spotify Concert Mapper')
-    .setDescription('API for Spotify Concert Mapper')
+    .setTitle('Taver')
+    .setDescription('API for Taver')
     .setVersion('1.0')
     .build();
   const document = SwaggerModule.createDocument(app, config);
