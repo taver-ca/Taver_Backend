@@ -36,7 +36,7 @@ export const userApi = async (code: string, code_verifier: string) => {
   const token = await getToken(code, code_verifier);
   return SpotifyApi.withAccessToken(
     process.env.SPOTIFY_CLIENT_ID,
-    token.access_token,
+    token,
   );
 };
 export default api;
