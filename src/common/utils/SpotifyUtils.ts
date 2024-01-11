@@ -18,11 +18,12 @@ export const getConcertData = async (id) => {
 
     const results = [];
 
-    if (obj['@graph'].length > 1) {
-      const concert_details = obj['@graph'][1];
+    for (let i = 1; i < obj['@graph'].length - 1; i++) {
+      const concert_details = obj['@graph'][i];
       results.push({
         title: concert_details.name,
         date: concert_details.startDate,
+        artist: obj['@graph'][0].name,
         location: {
           name: concert_details.location.name,
           latitude: concert_details.location.latitude,
