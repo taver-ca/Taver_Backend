@@ -3,7 +3,7 @@ import { getArtist, getConcertData } from 'src/common/utils/SpotifyUtils';
 
 @Injectable()
 export class ConcertsService {
-  async findOne(artistName: string) {
+  async FindConcertForArtist(artistName: string) {
     const artist = await getArtist(artistName);
 
     let concert_response = await getConcertData(artist.id);

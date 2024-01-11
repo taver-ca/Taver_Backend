@@ -4,7 +4,7 @@ import { getConcertData } from 'src/common/utils/SpotifyUtils';
 
 @Injectable()
 export class ArtistsService {
-  async findAll(code: string, code_verifier: string) {
+  async GetFollowedArtists(code: string, code_verifier: string) {
     const api = await userApi(code, code_verifier);
 
     const artistList = await api.currentUser.topItems('artists');

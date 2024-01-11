@@ -1,15 +1,16 @@
-import { Controller, Get, Param } from '@nestjs/common';
+import { Controller, Post, Body, Res  } from '@nestjs/common';
 import { ArtistsService } from './artists.service';
+import { authorization } from './entities/authorization.entity';
+import { Response } from 'express';
 
-@Controller('artists')
+@Controller('getFollowedArtists')
 export class ArtistsController {
-  constructor(private readonly artistsService: ArtistsService) {}
+  constructor(private readonly artistsService: ArtistsService) { }
 
-  @Get('top')
-  findAll(
-    @Param('code') code: string,
-    @Param('code_verifier') code_verifier: string,
-  ) {
-    return this.artistsService.findAll(code, code_verifier);
+  @Post()
+  async GetFollowedArtists(@Res() res:Response, @Body() authorization: authorization) {
+    console.log(authorization);
+    var result = await this.artistsService.GetFollowedArtists(authorization.code, authorization.code_verifier);
+    return res.status(200).send(result);
   }
 }
