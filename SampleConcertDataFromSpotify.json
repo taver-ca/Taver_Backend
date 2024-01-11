@@ -1,0 +1,260 @@
+{
+    "@context": "http://schema.org/",
+    "@graph": [
+        {
+            "@type": "MusicGroup",
+            "name": "reezy",
+            "url": "https://open.spotify.com/artist/1ul8iLt2WnFe2UIyovjg7q"
+        },
+        {
+            "@type": "MusicEvent",
+            "@id": "https://open.spotify.com/concert/5KIG4c4hsLu4gYCghRqKuv",
+            "name": "REEZY LIVE - \"CALL IT A NIGHT TOUR\"",
+            "startDate": "2024-09-27T18:00:00+0000",
+            "url": "https://open.spotify.com/concert/5KIG4c4hsLu4gYCghRqKuv",
+            "performer": [
+                {
+                    "@type": "MusicGroup",
+                    "name": "reezy",
+                    "url": "https://open.spotify.com/artist/1ul8iLt2WnFe2UIyovjg7q"
+                }
+            ],
+            "location": {
+                "@type": "Place",
+                "name": "Porsche-Arena",
+                "latitude": 48.7666999809595,
+                "longitude": 9.18333001162125,
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "STUTTGART"
+                }
+            }
+        },
+        {
+            "@type": "MusicEvent",
+            "@id": "https://open.spotify.com/concert/5vqqcnioGad1IxEk0iOZzX",
+            "name": "REEZY LIVE - \"CALL IT A NIGHT TOUR\"",
+            "startDate": "2024-09-28T18:00:00+0000",
+            "url": "https://open.spotify.com/concert/5vqqcnioGad1IxEk0iOZzX",
+            "performer": [
+                {
+                    "@type": "MusicGroup",
+                    "name": "reezy",
+                    "url": "https://open.spotify.com/artist/1ul8iLt2WnFe2UIyovjg7q"
+                }
+            ],
+            "location": {
+                "@type": "Place",
+                "name": "Porsche-Arena",
+                "latitude": 48.7666999809595,
+                "longitude": 9.18333001162125,
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "STUTTGART"
+                }
+            }
+        },
+        {
+            "@type": "MusicEvent",
+            "@id": "https://open.spotify.com/concert/2cOeBcPFRnhfJaMy7QdgaZ",
+            "name": "reezy at myticket Jahrhunderthalle (September 30, 2024)",
+            "startDate": "2024-09-30T18:00:00+0000",
+            "url": "https://open.spotify.com/concert/2cOeBcPFRnhfJaMy7QdgaZ",
+            "performer": [
+                {
+                    "@type": "MusicGroup",
+                    "name": "reezy",
+                    "url": "https://open.spotify.com/artist/1ul8iLt2WnFe2UIyovjg7q"
+                }
+            ],
+            "location": {
+                "@type": "Place",
+                "name": "myticket Jahrhunderthalle",
+                "latitude": 50.09914,
+                "longitude": 8.51972,
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Frankfurt"
+                }
+            }
+        },
+        {
+            "@type": "MusicEvent",
+            "@id": "https://open.spotify.com/concert/0qYkKWQhUCmPetoKWdljZp",
+            "name": "REEZY LIVE - \"CALL IT A NIGHT TOUR\"",
+            "startDate": "2024-09-30T18:00:00+0000",
+            "url": "https://open.spotify.com/concert/0qYkKWQhUCmPetoKWdljZp",
+            "performer": [
+                {
+                    "@type": "MusicGroup",
+                    "name": "reezy",
+                    "url": "https://open.spotify.com/artist/1ul8iLt2WnFe2UIyovjg7q"
+                }
+            ],
+            "location": {
+                "@type": "Place",
+                "name": "myticket Jahrhunderthalle Frankfurt",
+                "latitude": 50.1166999865789,
+                "longitude": 8.68333002651653,
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "FRANKFURT"
+                }
+            }
+        },
+        {
+            "@type": "MusicEvent",
+            "@id": "https://open.spotify.com/concert/6sEKV5YlcKkANUQT710KhU",
+            "name": "reezy at myticket Jahrhunderthalle (October 1, 2024)",
+            "startDate": "2024-10-01T18:00:00+0000",
+            "url": "https://open.spotify.com/concert/6sEKV5YlcKkANUQT710KhU",
+            "performer": [
+                {
+                    "@type": "MusicGroup",
+                    "name": "reezy",
+                    "url": "https://open.spotify.com/artist/1ul8iLt2WnFe2UIyovjg7q"
+                }
+            ],
+            "location": {
+                "@type": "Place",
+                "name": "myticket Jahrhunderthalle",
+                "latitude": 50.09914,
+                "longitude": 8.51972,
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Frankfurt"
+                }
+            }
+        }
+    ]
+}
+{
+    "@context": "http://schema.org/",
+    "@graph": [
+        {
+            "@type": "MusicGroup",
+            "name": "reezy",
+            "url": "https://open.spotify.com/artist/1ul8iLt2WnFe2UIyovjg7q"
+        },
+        {
+            "@type": "MusicEvent",
+            "@id": "https://open.spotify.com/concert/5KIG4c4hsLu4gYCghRqKuv",
+            "name": "REEZY LIVE - \"CALL IT A NIGHT TOUR\"",
+            "startDate": "2024-09-27T18:00:00+0000",
+            "url": "https://open.spotify.com/concert/5KIG4c4hsLu4gYCghRqKuv",
+            "performer": [
+                {
+                    "@type": "MusicGroup",
+                    "name": "reezy",
+                    "url": "https://open.spotify.com/artist/1ul8iLt2WnFe2UIyovjg7q"
+                }
+            ],
+            "location": {
+                "@type": "Place",
+                "name": "Porsche-Arena",
+                "latitude": 48.7666999809595,
+                "longitude": 9.18333001162125,
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "STUTTGART"
+                }
+            }
+        },
+        {
+            "@type": "MusicEvent",
+            "@id": "https://open.spotify.com/concert/5vqqcnioGad1IxEk0iOZzX",
+            "name": "REEZY LIVE - \"CALL IT A NIGHT TOUR\"",
+            "startDate": "2024-09-28T18:00:00+0000",
+            "url": "https://open.spotify.com/concert/5vqqcnioGad1IxEk0iOZzX",
+            "performer": [
+                {
+                    "@type": "MusicGroup",
+                    "name": "reezy",
+                    "url": "https://open.spotify.com/artist/1ul8iLt2WnFe2UIyovjg7q"
+                }
+            ],
+            "location": {
+                "@type": "Place",
+                "name": "Porsche-Arena",
+                "latitude": 48.7666999809595,
+                "longitude": 9.18333001162125,
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "STUTTGART"
+                }
+            }
+        },
+        {
+            "@type": "MusicEvent",
+            "@id": "https://open.spotify.com/concert/2cOeBcPFRnhfJaMy7QdgaZ",
+            "name": "reezy at myticket Jahrhunderthalle (September 30, 2024)",
+            "startDate": "2024-09-30T18:00:00+0000",
+            "url": "https://open.spotify.com/concert/2cOeBcPFRnhfJaMy7QdgaZ",
+            "performer": [
+                {
+                    "@type": "MusicGroup",
+                    "name": "reezy",
+                    "url": "https://open.spotify.com/artist/1ul8iLt2WnFe2UIyovjg7q"
+                }
+            ],
+            "location": {
+                "@type": "Place",
+                "name": "myticket Jahrhunderthalle",
+                "latitude": 50.09914,
+                "longitude": 8.51972,
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Frankfurt"
+                }
+            }
+        },
+        {
+            "@type": "MusicEvent",
+            "@id": "https://open.spotify.com/concert/0qYkKWQhUCmPetoKWdljZp",
+            "name": "REEZY LIVE - \"CALL IT A NIGHT TOUR\"",
+            "startDate": "2024-09-30T18:00:00+0000",
+            "url": "https://open.spotify.com/concert/0qYkKWQhUCmPetoKWdljZp",
+            "performer": [
+                {
+                    "@type": "MusicGroup",
+                    "name": "reezy",
+                    "url": "https://open.spotify.com/artist/1ul8iLt2WnFe2UIyovjg7q"
+                }
+            ],
+            "location": {
+                "@type": "Place",
+                "name": "myticket Jahrhunderthalle Frankfurt",
+                "latitude": 50.1166999865789,
+                "longitude": 8.68333002651653,
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "FRANKFURT"
+                }
+            }
+        },
+        {
+            "@type": "MusicEvent",
+            "@id": "https://open.spotify.com/concert/6sEKV5YlcKkANUQT710KhU",
+            "name": "reezy at myticket Jahrhunderthalle (October 1, 2024)",
+            "startDate": "2024-10-01T18:00:00+0000",
+            "url": "https://open.spotify.com/concert/6sEKV5YlcKkANUQT710KhU",
+            "performer": [
+                {
+                    "@type": "MusicGroup",
+                    "name": "reezy",
+                    "url": "https://open.spotify.com/artist/1ul8iLt2WnFe2UIyovjg7q"
+                }
+            ],
+            "location": {
+                "@type": "Place",
+                "name": "myticket Jahrhunderthalle",
+                "latitude": 50.09914,
+                "longitude": 8.51972,
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Frankfurt"
+                }
+            }
+        }
+    ]
+}
