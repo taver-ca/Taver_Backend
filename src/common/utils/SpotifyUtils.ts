@@ -44,8 +44,6 @@ export const getConcertDataWithDates = async (id, startDate, endDate) => {
     const $ = cheerio.load(data);
     const loaded = $('[type="application/ld+json"]');
     const obj = JSON.parse(loaded.text());
-    const startDateObj = new Date(startDate);
-    const endDateObj = new Date(endDate);
     const results = [];
 
     for (let i = 1; i < obj['@graph'].length - 1; i++) {
@@ -61,11 +59,17 @@ export const getConcertDataWithDates = async (id, startDate, endDate) => {
         },
       });
     }
+    console.log("before filter");
+    console.log(results);
     const filteredResults = results.filter((concert) => {
       const concertDate = new Date(concert.date);
-      return concertDate >= startDateObj && concertDate <= endDateObj;
+      const comp_startDate = new Date(startDate);
+      const comp_endDate = new Date(endDate);
+      var decision = concertDate >= comp_startDate && concertDate <= comp_endDate;
+      return decision;
     });
-
+    console.log("after filter");
+    console.log(filteredResults);
     return filteredResults;
   } catch (error) {
     throw error;
