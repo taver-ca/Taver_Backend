@@ -3,10 +3,10 @@ import { getArtist, getConcertData } from 'src/common/utils/SpotifyUtils';
 
 @Injectable()
 export class ConcertsService {
-  async FindConcertForArtist(artistName: string, startDate: Date, endDate: Date) {
+  async FindConcertForArtist(artistName: string) {
     const artist = await getArtist(artistName);
 
-    let concert_response = await getConcertData(artist.id, startDate, endDate);
+    let concert_response = await getConcertData(artist.id);
     concert_response = concert_response.map((res) => ({
       ...res,
       image: artist.images[2],
