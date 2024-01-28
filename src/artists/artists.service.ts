@@ -14,7 +14,7 @@ export class ArtistsService {
 
     let response = await Promise.all(
       artistList.items.map(async function (artist) {
-        return artist.name;
+        return {artistName: artist.name, concertData: await getConcertData(artist.id)};
       }),
     );
     response = response.filter(Boolean);
