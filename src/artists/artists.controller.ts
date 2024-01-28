@@ -1,4 +1,4 @@
-import { Controller, Post, Body, Res  } from '@nestjs/common';
+import { Controller, Post, Body, Res } from '@nestjs/common';
 import { ArtistsService } from './artists.service';
 import { authorization } from './entities/authorization.entity';
 import { Response } from 'express';
@@ -8,9 +8,10 @@ export class ArtistsController {
   constructor(private readonly artistsService: ArtistsService) { }
 
   @Post()
-  async GetFollowedArtists(@Res() res:Response, @Body() authorization: authorization) {
+  async GetFollowedArtists(@Res() res: Response, @Body() authorization: authorization) {
+    console.log("authorization: ");
     console.log(authorization);
-    var result = await this.artistsService.GetFollowedArtists(authorization.code, authorization.code_verifier);
+    var result = await this.artistsService.GetFollowedArtists(authorization.code, authorization.code_verifier, authorization.startDate, authorization.endDate);
     return res.status(200).send(result);
   }
 }
