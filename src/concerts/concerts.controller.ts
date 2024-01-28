@@ -10,7 +10,7 @@ export class ConcertsController {
   @Post()
   async FindConcertForArtist(@Res() res:Response, @Body() concert: concert ) {
     console.log(concert.artistName);
-    var result = await this.concertsService.FindConcertForArtist(concert.artistName);    
+    var result = await this.concertsService.FindConcertForArtist(concert.artistName,concert.startDate,concert.endDate);    
     return res.status(200).send(result);
   }
 }

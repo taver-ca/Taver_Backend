@@ -11,7 +11,7 @@ export class ArtistsController {
   async GetFollowedArtists(@Res() res: Response, @Body() authorization: authorization) {
     console.log("authorization: ");
     console.log(authorization);
-    var result = await this.artistsService.GetFollowedArtists(authorization.code, authorization.code_verifier);
+    var result = await this.artistsService.GetFollowedArtists(authorization.code, authorization.code_verifier, authorization.startDate, authorization.endDate);
     return res.status(200).send(result);
   }
 }

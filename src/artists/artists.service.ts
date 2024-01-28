@@ -4,7 +4,7 @@ import { getConcertData } from 'src/common/utils/SpotifyUtils';
 
 @Injectable()
 export class ArtistsService {
-  async GetFollowedArtists(code: string, code_verifier: string) {
+  async GetFollowedArtists(code: string, code_verifier: string, startDate: Date, endDate: Date) {
     const api = await userApi(code, code_verifier);
 
     const artistList = await api.currentUser.topItems('artists');
@@ -14,7 +14,11 @@ export class ArtistsService {
 
     let response = await Promise.all(
       artistList.items.map(async function (artist) {
-        return artist.name;
+        const artistConcertData = await getConcertData(artist.id, startDate, endDate);
+
+        if (artistConcertData.length > 0) {
+          return artist.name;
+        }
       }),
     );
     response = response.filter(Boolean);

@@ -7,7 +7,7 @@ export const getArtist = async (name: string) => {
   return items.artists.items[0];
 };
 
-export const getConcertData = async (id: string) => {
+export const getConcertData = async (id: string, startDate: Date, endDate: Date) => {
   try {
     const { data } = await axios.get(
       `https://open.spotify.com/artist/${id}/concerts`,
@@ -31,9 +31,18 @@ export const getConcertData = async (id: string) => {
         },
       });
     }
-    console.log("concert data: ");
+    console.log("before filter");
     console.log(results);
-    return results;
+    const filteredResults = results.filter((concert) => {
+      const concertDate = new Date(concert.date);
+      const comp_startDate = new Date(startDate);
+      const comp_endDate = new Date(endDate);
+      var decision = concertDate >= comp_startDate && concertDate <= comp_endDate;
+      return decision;
+    });
+    console.log("after filter");
+    console.log(filteredResults);
+    return filteredResults;
   } catch (error) {
     throw error;
   }
