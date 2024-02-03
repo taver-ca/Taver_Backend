@@ -21,13 +21,14 @@ export const getToken = async (code, code_verifier) => {
       code_verifier: code_verifier,
     }),
   };
-  
+  console.log(payload.body);
   const body = await fetch('https://accounts.spotify.com/api/token', payload);
   const response = await body.json();
   if (body.status == 200) {
     return response;
   }
-  throw new Error(response);
+  console.log(`${response.error} ${response.error_description}`);
+  throw new Error(`${response.error} ${response.error_description}`);
 };
 
 export const userApi = async (code: string, code_verifier: string) => {
