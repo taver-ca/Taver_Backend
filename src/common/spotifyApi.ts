@@ -17,7 +17,7 @@ export const getToken = async (code, code_verifier) => {
       client_id: process.env.SPOTIFY_CLIENT_ID,
       grant_type: 'authorization_code',
       code: code,
-      redirect_uri: process.env.PLAYLISTIC_REDIRECT_URI,
+      redirect_uri: process.env.TAVER_REDIRECT_URI,
       code_verifier: code_verifier,
     }),
   };

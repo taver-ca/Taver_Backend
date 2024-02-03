@@ -7,7 +7,6 @@ dotenv.config();
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   const port = process.env.PORT || 3001;
-  const env = process.env.NODE_ENV || 'development';
 
   const config = new DocumentBuilder()
     .setTitle('Taver')
