@@ -21,15 +21,13 @@ export const getToken = async (code, code_verifier) => {
       code_verifier: code_verifier,
     }),
   };
-
+  
   const body = await fetch('https://accounts.spotify.com/api/token', payload);
-  console.log('status: ');
-  console.log(body.status);
+  const response = await body.json();
   if (body.status == 200) {
-    const response = await body.json();
     return response;
   }
-  throw new Error('bad response for access token');
+  throw new Error(response);
 };
 
 export const userApi = async (code: string, code_verifier: string) => {
