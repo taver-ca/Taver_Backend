@@ -15,10 +15,9 @@ export const getConcertData = async (id: string, startDate: Date, endDate: Date)
     const $ = cheerio.load(data);
     const loaded = $('[type="application/ld+json"]');
     const obj = JSON.parse(loaded.text());
-
     const results = [];
 
-    for (let i = 1; i < obj['@graph'].length - 1; i++) {
+    for (let i = 1; i <= obj['@graph'].length - 1; i++) {
       const concert_details = obj['@graph'][i];
       results.push({
         title: concert_details.name,
