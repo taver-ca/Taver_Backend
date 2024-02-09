@@ -5,12 +5,12 @@ import { Response } from 'express';
 
 @Controller('concerts')
 export class ConcertsController {
-  constructor(private readonly concertsService: ConcertsService) {}
+  constructor(private readonly concertsService: ConcertsService) { }
 
   @Post()
-  async FindConcertForArtist(@Res() res:Response, @Body() concert: concert ) {
+  async FindConcertForArtist(@Res() res: Response, @Body() concert: concert) {
     console.log(concert.artistName);
-    var result = await this.concertsService.FindConcertForArtist(concert.artistName,concert.startDate,concert.endDate);    
+    var result = await this.concertsService.FindConcertForArtist(concert.artistName, concert.startDate, concert.endDate);
     return res.status(200).send(result);
   }
 }
