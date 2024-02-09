@@ -1,11 +1,12 @@
 import { Injectable } from '@nestjs/common';
+import { AccessToken } from '@spotify/web-api-ts-sdk';
 import { userApi } from 'src/common/spotifyApi';
 import { getConcertData } from 'src/common/utils/SpotifyUtils';
 
 @Injectable()
 export class ArtistsService {
-  async GetFollowedArtists(code: string, code_verifier: string, startDate: Date, endDate: Date) {
-    const api = await userApi(code, code_verifier);
+  async GetFollowedArtists(access_token: AccessToken, startDate: Date, endDate: Date) {
+    const api = await userApi(access_token);
 
     const artistList = await api.currentUser.topItems('artists');
 

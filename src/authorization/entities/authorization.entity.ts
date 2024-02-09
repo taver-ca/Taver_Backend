@@ -5,8 +5,4 @@ export class authorization {
     code: string;
     @ApiProperty()
     code_verifier: string;
-    @ApiProperty()
-    startDate: Date;
-    @ApiProperty()
-    endDate: Date;
 }

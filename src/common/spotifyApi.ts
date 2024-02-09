@@ -1,4 +1,4 @@
-import { SpotifyApi } from '@spotify/web-api-ts-sdk';
+import { AccessToken, SpotifyApi } from '@spotify/web-api-ts-sdk';
 
 const api = () => {
   return SpotifyApi.withClientCredentials(
@@ -31,11 +31,10 @@ export const getToken = async (code, code_verifier) => {
   throw new Error(`${response.error} ${response.error_description}`);
 };
 
-export const userApi = async (code: string, code_verifier: string) => {
-  const token = await getToken(code, code_verifier);
+export const userApi = async (access_token: AccessToken) => {
   return SpotifyApi.withAccessToken(
     process.env.SPOTIFY_CLIENT_ID,
-    token,
+    access_token,
   );
 };
 export default api;
