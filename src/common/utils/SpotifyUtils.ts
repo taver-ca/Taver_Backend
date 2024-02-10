@@ -25,6 +25,7 @@ export const getConcertData = async (id: string, startDate: Date, endDate: Date)
         artist: obj['@graph'][0].name,
         location: {
           name: concert_details.location.name,
+          address: concert_details.location.address.addressLocality,
           latitude: concert_details.location.latitude,
           longitude: concert_details.location.longitude,
         },
