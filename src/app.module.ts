@@ -5,10 +5,11 @@ import { ConcertsModule } from './concerts/concerts.module';
 import { ConfigModule } from '@nestjs/config';
 import { ArtistsModule } from './artists/artists.module';
 import { AuthorizationModule } from './authorization/authorizatoin.module'
+import { ImageProxyController } from './image-proxy/image-proxy.controller';
 
 @Module({
   imports: [ConfigModule.forRoot(), ConcertsModule, ArtistsModule, AuthorizationModule],
-  controllers: [AppController],
+  controllers: [AppController, ImageProxyController],
   providers: [AppService],
 })
 export class AppModule { }
