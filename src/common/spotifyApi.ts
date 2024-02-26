@@ -7,7 +7,7 @@ const api = () => {
   );
 };
 
-export const getToken = async (code, code_verifier) => {
+export const getToken = async (code: string, code_verifier: string) => {
   const payload = {
     method: 'POST',
     headers: {
